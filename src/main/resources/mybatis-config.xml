@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--配置别名，使用包扫描-->
+    <typeAliases>
+        <package name="com.wcy.pojo"/>
+    </typeAliases>
+
+    <!--配置数据库环境信息，可以配置多个，通过default来切换-->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <!--数据库连接信息-->
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql:///mybatis?useSSL=false"/>
+                <property name="username" value="root"/>
+                <property name="password" value="root"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <!--sql映射文件-->
+<!--        <mapper resource="com/wcy/mapper/UserMapper.xml"/>-->
+        <!--mapper代理方式，一行代码搞定-->
+        <package name="com.wcy.mapper"/>
+    </mappers>
+</configuration>
