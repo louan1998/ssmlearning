@@ -24,6 +24,7 @@ class Outer {
 
 }
 
+//注解
 class InnerTest {
 
     public static void main(String[] args) {
