@@ -30,8 +30,6 @@ class InnerTest {
     public static void main(String[] args) {
 
         new Outer().new Inner().show();
-        print(1, 2, 3, 4, 5);
-        System.out.println(add(1, 2, 3, 4, 5));
 
     }
 }
